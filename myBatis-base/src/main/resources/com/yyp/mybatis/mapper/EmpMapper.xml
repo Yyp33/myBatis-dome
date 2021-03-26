@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+   namespace:非接口绑定方式下名称可以随便写，接口绑定的方式下需要写定影mapper完全限定名
+-->
+<mapper namespace="com.yyp.mybatis.mapper.EmpMapper">
+
+
+    <!--根据id查询Emp实体
+        接口绑定形式下：id需要与mapper中的方法名相同
+        返回值类型：需要是mapper中方法返回值的类型
+    -->
+    <select id="selectEmp" resultType="com.yyp.mybatis.entity.Emp">
+        select * from Emp where id = #{id}
+    </select>
+
+</mapper>
